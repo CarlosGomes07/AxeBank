@@ -56,9 +56,9 @@ const Cadastro = () => {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
-      {/* Coluna da esquerda - Banner/Imagem */}
+      
       <div className="md:w-1/2 bg-axe-purple flex flex-col justify-center items-center p-8 text-white">
-        {/* Back button */}
+
         <Link 
           to="/landing" 
           className="absolute top-4 left-4 flex items-center text-white hover:text-white/80 transition-colors"
@@ -108,9 +108,8 @@ const Cadastro = () => {
         </div>
       </div>
       
-      {/* Coluna da direita - Formulário */}
       <div className="md:w-1/2 p-8 flex items-center justify-center">
-        {/* Back button for mobile view */}
+      
         <Link 
           to="/landing" 
           className="absolute top-4 left-4 flex items-center text-gray-700 md:hidden"
@@ -223,7 +222,7 @@ const Cadastro = () => {
               <div className="text-center mt-4">
                 <p className="text-sm text-gray-600">
                   Já tem uma conta?{" "}
-                  <a href="#" className="text-axe-purple hover:underline">
+                  <a href="/login" className="text-axe-purple hover:underline">
                     Entre agora
                   </a>
                 </p>

@@ -1,10 +1,16 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import playStoreIcon from "@/assets/icons/playStoreIcon.svg";
+import appStoreIcon from "@/assets/icons/appStoreIcon.svg";
+import facebookIcon from "@/assets/icons/facebookIcon.svg";
+import instagramIcon from "@/assets/icons/instagramIcon.svg";
+import linkedinIcon from "@/assets/icons/linkedinIcon.svg";
+
 
 const Footer = () => {
   return (
-    <footer className="bg-axe-dark text-white pt-16 pb-8">
+      <footer className="bg-axe-dark text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -15,19 +21,30 @@ const Footer = () => {
               Transformando o jeito de lidar com dinheiro, tornando serviços financeiros acessíveis e descomplicados para todos.
             </p>
             <div className="flex space-x-4">
-              {["facebook", "twitter", "instagram", "linkedin"].map((social) => (
-                <a 
-                  key={social} 
-                  href="#" 
-                  className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-axe-purple/40 transition-colors"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="h-5 w-5 bg-white/80 rounded-sm"></div>
-                </a>
-              ))}
+              <a 
+                href="https://www.facebook.com"
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-axe-purple/40 transition-colors overflow-hidden"
+              >
+                <span className="sr-only">facebook</span>
+                <img src={facebookIcon} alt="Facebook" className="h-6 w-6 object-contain" />
+              </a>
+              <a 
+                href="https://www.instagram.com" 
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-axe-purple/40 transition-colors overflow-hidden"
+              >
+                <span className="sr-only">instagram</span>
+                <img src={instagramIcon} alt="Instagram" className="h-6 w-6 object-contain" />
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-axe-purple/40 transition-colors overflow-hidden"
+              >
+                <span className="sr-only">linkedin</span>
+                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6 object-contain" />
+              </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-3">
@@ -55,8 +72,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-axe-purple mt-1" />
                 <span className="text-white/70">
-                  Setor Bancario Sul, Quadra: 03 Bloco B <br />
-                  Brasilia - DF, 01310-100
+                  Av. Paulista, 1000<br />
+                  São Paulo - SP, 01310-100
                 </span>
               </li>
             </ul>
@@ -69,20 +86,20 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <a 
-                href="#" 
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2"
+                href="https://apps.apple.com/br/iphone/apps" 
+                className="flex items-center gap-3 bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2"
               >
-                <div className="h-8 w-8 rounded-full bg-white/80"></div>
+                <img src={appStoreIcon} alt="App Store" className="h-8 w-8 object-contain" />
                 <div>
                   <div className="text-xs">Disponível na</div>
                   <div className="font-medium">App Store</div>
                 </div>
               </a>
               <a 
-                href="Google Play" 
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2"
+                href="https://play.google.com/store/apps"
+                className="flex items-center gap-3 bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2"
               >
-                <div className="h-8 w-8 rounded-full bg-white/40"></div>
+                <img src={playStoreIcon} alt="Google Play" className="h-8 w-8 object-contain" />
                 <div>
                   <div className="text-xs">Disponível no</div>
                   <div className="font-medium">Google Play</div>

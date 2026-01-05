@@ -13,7 +13,7 @@ const HomeBank = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-axe-dark to-black text-white">
-      {/* Top Navigation */}
+    
       <header className="bg-black/40 backdrop-blur-md border-b border-white/10 p-4 fixed top-0 w-full z-10">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/landing" className="text-2xl font-bold">
@@ -32,7 +32,7 @@ const HomeBank = () => {
       </header>
       
       <main className="container mx-auto pt-24 pb-20 px-4">
-        {/* Welcome Section */}
+        
         <motion.section className="mb-8">
           <motion.h1 className="text-3xl font-bold mb-2">
             Olá, {userName.split(' ')[0]}!
@@ -42,7 +42,6 @@ const HomeBank = () => {
           </motion.p>
         </motion.section>
         
-        {/* Balance Card */}
         <motion.section className="mb-8">
           <Card className="bg-gradient-to-br from-axe-purple/80 to-axe-purple/30 border-none backdrop-blur-md overflow-hidden relative">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYxMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPjwvc3ZnPg==')]"></div>
@@ -81,7 +80,6 @@ const HomeBank = () => {
           </Card>
         </motion.section>
         
-        {/* Quick Actions */}
         <motion.section className="mb-8">
           <h2 className="text-xl font-semibold mb-4">Ações rápidas</h2>
           <div className="grid grid-cols-4 gap-3">
@@ -102,7 +100,6 @@ const HomeBank = () => {
           </div>
         </motion.section>
         
-        {/* My Cards Section */}
         <motion.section className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Meus cartões</h2>
@@ -144,7 +141,6 @@ const HomeBank = () => {
           </div>
         </motion.section>
         
-        {/* Recent Transactions */}
         <motion.section>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Transações recentes</h2>
@@ -186,7 +182,6 @@ const HomeBank = () => {
         </motion.section>
       </main>
       
-      {/* Bottom Navigation */}
       <footer className="fixed bottom-0 w-full bg-black/40 backdrop-blur-md border-t border-white/10">
         <div className="container mx-auto">
           <div className="flex justify-around py-3">

@@ -72,8 +72,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-axe-purple mt-1" />
                 <span className="text-white/70">
-                  Av. Paulista, 1000<br />
-                  São Paulo - SP, 01310-100
+                  Setor Bancario Sul, Quadra: 03 Bloco B <br />
+                  Brasilia - DF, 01310-100
                 </span>
               </li>
             </ul>

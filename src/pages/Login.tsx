@@ -6,13 +6,18 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft, LogIn } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useUser } from '@/contexts/UserContext'; // Import useUser
 
 const Login = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const { login } = useUser(); // Get login function from context
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Set user data in the context
+    login({ name: 'Carlos Gomes' });
     
     // Mock login - in a real app, this would call an API
     toast({

@@ -3,13 +3,30 @@ import React, { useState } from 'react';
 import { motion } from '@/components/ui/motion';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { ArrowRight, Circle, Database, ShieldCheck, Smartphone, TrendingUp, Zap } from 'lucide-react';
+import { useUser } from '@/contexts/UserContext';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+
+// Helper function to get initials from a name
+const getInitials = (name: string | undefined) => {
+  if (!name) return 'V'; // V for Visitante (Visitor)
+  const names = name.split(' ');
+  const initials = names.map(n => n[0]).join('');
+  return initials.slice(0, 2).toUpperCase();
+};
 
 const HomeBank = () => {
-  const [userName, setUserName] = useState('Maria Silva');
+  const { user } = useUser();
   const [balance, setBalance] = useState(12589.42);
   const [showBalance, setShowBalance] = useState(true);
+
+  // If no user is logged in, redirect to the login page
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  const userName = user.name;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-axe-dark to-black text-white">
@@ -24,9 +41,11 @@ const HomeBank = () => {
             <button className="p-2 rounded-full hover:bg-white/10 transition-colors">
               <Circle className="w-5 h-5" />
             </button>
-            <div className="h-10 w-10 rounded-full bg-axe-purple flex items-center justify-center text-lg font-medium">
-              {userName.charAt(0)}
-            </div>
+            <Avatar>
+              <AvatarFallback className="bg-axe-purple text-lg font-medium">
+                {getInitials(userName)}
+              </AvatarFallback>
+            </Avatar>
           </div>
         </div>
       </header>
